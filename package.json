@@ -1,5 +1,5 @@
 {
-  "name": "restaurant-page",
+  "name": "todolist",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Distant-Skyline-Xtal/restaurant-page.git"
+    "url": "git+https://github.com/Distant-Skyline-Xtal/Todolist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Distant-Skyline-Xtal/restaurant-page/issues"
+    "url": "https://github.com/Distant-Skyline-Xtal/Todolist/issues"
   },
-  "homepage": "https://github.com/Distant-Skyline-Xtal/restaurant-page#readme",
+  "homepage": "https://github.com/Distant-Skyline-Xtal/Todolist#readme",
   "description": "",
   "devDependencies": {
     "css-loader": "^7.1.2",
