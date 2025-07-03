@@ -4,17 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav>
-            <button id="home-btn">Home</button>
-            <button id="about-btn">About</button>
-            <button id="menu-btn">Menu</button>
-            <button id="contact-btn">Contact</button>
-        </nav>
     </header>
     <div id="content">
+        <div class="header">
+            <div class="title-container">
+                <h1>Todo List</h1>
+            </div>
+        </div>
+
+        <div class="user-bar">
+                User-bar
+        </div>
+        <div class="project-dashboard">
+            <div class="project-container">
+                <h2>Projects</h2>
+                <div class="project-card">
+                    <h3>Project Title</h3>
+                    <p class="bodytext" id="project-desc">
+                        This is a description of a project.
+                    </p>
+                    <div class="todolist">
+                        <div class="todoitem">
+                            <h4 id="todoitem-title"> Study Programming!</h4>
+                            <p class="body-text-small" id="todoitem-desc">This is a description of a todo-item.</p>
+                            <p class="body-text-small" id="todoitem-date">20/4/1998</p>
+                            <button class="button-delete-icon">
+                                <img src="./images/delete.svg" alt="Delete todoitem button" class="delete-icon">
+                            </button>
+                            <input type="checkbox" name="todoitem-complete" id="todoitem-complete">
+                        </div>
+
+                        <div class="todoitem">
+                            <h4 id="todoitem-title"> Study Programming!</h4>
+                            <p class="body-text-small" id="todoitem-desc">This is a description of a todo-item.</p>
+                            <p class="body-text-small" id="todoitem-date">20/4/1998</p>
+                            <input type="checkbox" name="todoitem-complete" id="todoitem-complete">
+                        </div>
+
+                        <div class="todoitem">
+                            <h4 id="todoitem-title"> Study Programming!</h4>
+                            <p class="body-text-small" id="todoitem-desc">This is a description of a todo-item.</p>
+                            <p class="body-text-small" id="todoitem-date">20/4/1998</p>
+                            <input type="checkbox" name="todoitem-complete" id="todoitem-complete">
+                        </div>
+
+                        <div class="todoitem">
+                            <h4 id="todoitem-title"> Study Programming!</h4>
+                            <p class="body-text-small" id="todoitem-desc">This is a description of a todo-item.</p>
+                            <p class="body-text-small" id="todoitem-date">20/4/1998</p>
+                            <input type="checkbox" name="todoitem-complete" id="todoitem-complete">
+                        </div>
+
+                        <div class="todoitem">
+                            <h4 id="todoitem-title"> Study Programming!</h4>
+                            <p class="body-text-small" id="todoitem-desc">This is a description of a todo-item.</p>
+                            <p class="body-text-small" id="todoitem-date">20/4/1998</p>
+                            <input type="checkbox" name="todoitem-complete" id="todoitem-complete">
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="projectcard-footer">
+                        <button class="button-add-icon">
+                            <img src="./images/plus-circle.svg" alt="Add Todoitem button" class="add-icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <button class="add-project-button">
+                <img src="./images/plus-circle.svg" alt="add project button">
+            </button>
+
+        <div class="addproject-container">
+        </div>
     </div>
 </body>
 </html>
