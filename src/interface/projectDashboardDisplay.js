@@ -141,7 +141,8 @@ export function projectDashboard(document) {
         // Create todo item container
         const todoItemElement = document.createElement("div");
         todoItemElement.classList.add("todoitem");
-        
+        todoItemElement.classList.add(`priority-${todoItem.priority.toLowerCase()}`);
+        todoItemElement.id = todoItem.itemID;
         // Create todo item title
         const todoTitle = document.createElement("h4");
         todoTitle.id = "todoitem-title";
@@ -190,26 +191,39 @@ export function projectDashboard(document) {
 
         projectCard.todoItems.push(todoItem);
         projectCard.todoItemHolder.appendChild(todoItemElement);
-
+        console.log(`Added todoItemElement to DOM ${todoItemElement.id}`);
         return todoItem;
     }
 
     function removeTodoItem(projectID, todoItemID) {
+        console.log("removeToDoItem");
         let projectCard = projectCards.find(x => x.projectID == projectID);
         let itemCard = projectCard.todoItems.find(x => x.itemID == todoItemID);
         
         projectCard.todoItemHolder.removeChild(itemCard.element);
     }
 
+    function clearDashboard() {
+        console.log("clearDashboard")
+        let projectCardHolder = document.querySelector(".project-container");
+        [...projectCardHolder.children].forEach((element) => {
+            if (element.classList.contains("project-card"))
+                projectCardHolder.removeChild(element);
+        });
+
+        projectCards.length = 0;
+    }
+
     function refreshTodoItemList(project) {
-        let projectCard = projectcards.find(x => x.projectID == project.projectID);
+        console.log("refreshTodoItemList");
+        let projectCard = projectCards.find(x => x.projectID == project.projectID);
 
         [...projectCard.todoItemHolder.children].forEach((element) => {
             projectCardHolder.removeChild(element);
         });
 
 
-        for(todoItem of project.todoItems) {
+        for(let todoItem of project.todoItems) {
             createTodoItem(projectCard.projectID, todoItem);
         }
 
@@ -217,7 +231,7 @@ export function projectDashboard(document) {
     }
 
     return {createMainPage, 
-        refreshProjectCardsDisplay, refreshTodoItemList, 
+        refreshProjectCardsDisplay, refreshTodoItemList, clearDashboard,
         createProjectCard, createTodoItem, removeTodoItem, removeProject,
          addProjectButton, removeProjectButton, projectCards}
 }

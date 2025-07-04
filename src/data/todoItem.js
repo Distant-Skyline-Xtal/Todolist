@@ -6,6 +6,8 @@ export class TodoItem {
     #dateCreated;
     itemID;
     priority;
+    dateDue;
+    description;
     constructor(title, description, dateDue, priority) {
         this.title = title;
         this.description = description;
@@ -19,5 +21,14 @@ export class TodoItem {
     get completed() {return this.#completed;}
     set completed(value) {this.#completed = value;}
 
-    get dateCreated() {return format(this.#dateCreated, "dd/mm/yyyy");}
+    get dateCreatedFormatted() {return format(this.#dateCreated, "dd/mm/yyyy");}
+}
+
+export class TodoItemLocalStorage {
+    completed = false;
+    dateCreated;
+    dateDue;
+    itemID;
+    priority;
+    description;
 }

@@ -18,6 +18,10 @@ body {
     --highlight-color: #f0b429;
     --clear-color: rgba(0,0,0,0.0);
     --shadow-color: rgba(0,0,0,0.7);
+
+    --priority-low-color: #91f772;
+    --priority-medium-color: #f7d672;
+    --priority-high-color: #a62d2d;
     font-family: "Roboto", sans-serif;
     margin: 0;
 }
@@ -151,6 +155,7 @@ button {
     gap: 12px;
     width: 100%;
     flex: 4 1 auto;
+    padding: 4px;
 }
 
 .todoitem {
@@ -168,6 +173,18 @@ button {
     border-radius: 8px;
     box-shadow: 2px 2px 10px var(--shadow-color);
     padding: 12px;
+}
+
+.todoitem.priority-low {
+    background-color: var(--priority-low-color);
+}
+
+.todoitem.priority-medium {
+    background-color: var(--priority-medium-color);
+}
+
+.todoitem.priority-high {
+    background-color: var(--priority-high-color);
 }
 
 .todoitem #todoitem-title {
@@ -258,8 +275,14 @@ button {
     position: fixed;
     margin: auto;
     flex: 0;
+}
 
+#popup label {
+    margin-bottom: 8px;
+}
 
+#popup input {
+    margin-bottom: 16px;
 }
 
 #popup .button-holder {

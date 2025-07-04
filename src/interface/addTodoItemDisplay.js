@@ -9,6 +9,9 @@ export class AddTodoItemDisplay {
     descriptionInput;
     #descriptionLabel;
 
+    #priorityLabel;
+    priorityOptions;
+
     #buttonsHolder;
     createButton;
     cancelButton;
@@ -47,6 +50,24 @@ export class AddTodoItemDisplay {
         this.descriptionInput.setAttribute("name", "projectDesc");
         this.descriptionInput.setAttribute("required", "");
 
+
+        // Create priority dropdown
+        this.#priorityLabel = document.createElement("label");
+        this.#priorityLabel.setAttribute("for", "priority");
+        this.#priorityLabel.textContent = "Priority: ";
+
+        let options = ["Low", "Medium", "High"];
+        this.priorityOptions = document.createElement("select");
+        this.priorityOptions.setAttribute("id", "priority");
+        this.priorityOptions.setAttribute("name", "priority");
+        
+        for(let option of options) {
+            let optionElement = document.createElement("option");
+            optionElement.setAttribute('value', option);
+            optionElement.text = option;
+            this.priorityOptions.appendChild(optionElement);
+        }
+
         //Create Buttons
         this.#buttonsHolder = document.createElement("div");
         this.#buttonsHolder.classList.add("button-holder");
@@ -65,6 +86,10 @@ export class AddTodoItemDisplay {
         this.#todoItemForm.appendChild(this.nameInput);
         this.#todoItemForm.appendChild(this.#descriptionLabel);
         this.#todoItemForm.appendChild(this.descriptionInput);
+        this.#todoItemForm.appendChild(this.#priorityLabel);
+        this.#todoItemForm.appendChild(this.priorityOptions);
+
+
         this.#popupDiv.appendChild(this.#buttonsHolder);
         this.#buttonsHolder.appendChild(this.cancelButton);
         this.#buttonsHolder.appendChild(this.createButton);

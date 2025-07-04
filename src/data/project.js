@@ -15,3 +15,11 @@ export class project {
     get complete() {return this.#complete; }
     set complete(value) {this.#complete = value;}
 }
+
+export class projectLocalStorage {
+    complete = false;
+    title;
+    desc;
+    projectID;
+    todoItems = [];
+}
