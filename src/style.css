@@ -150,7 +150,7 @@ button {
     align-self: center;
 }
 
-.todolist {
+.todo-list {
     overflow-y: scroll;
     gap: 12px;
     width: 100%;
@@ -158,7 +158,7 @@ button {
     padding: 4px;
 }
 
-.todoitem {
+.todo-item {
     height: min-content;
     margin-bottom: 12px;
 
@@ -175,19 +175,19 @@ button {
     padding: 12px;
 }
 
-.todoitem.priority-low {
+.todo-item.priority-low {
     background-color: var(--priority-low-color);
 }
 
-.todoitem.priority-medium {
+.todo-item.priority-medium {
     background-color: var(--priority-medium-color);
 }
 
-.todoitem.priority-high {
+.todo-item.priority-high {
     background-color: var(--priority-high-color);
 }
 
-.todoitem #todoitem-title {
+.todo-item #todoitem-title {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin: 0;
@@ -195,20 +195,20 @@ button {
     align-self: top;
 } 
 
-.todoitem #todoitem-desc {
+.todo-item #todoitem-desc {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
 } 
 
 
-.todoitem #todoitem-date {
+.todo-item #todoitem-date {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
 
     justify-self: right;
 } 
 
-.todoitem #todoitem-complete {
+.todo-item #todoitem-complete {
     grid-column: 2 / 3;
     grid-row:  4 / 5;
 
@@ -217,7 +217,7 @@ button {
     justify-self: center;
 }
 
-.todoitem button {
+.todo-item button {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
     border-style: none;
@@ -227,7 +227,7 @@ button {
     justify-self: center;
 }
 
-.add-project-button {
+.add-project-btn {
     position: fixed;
     right: 0px;
     bottom: 0px;

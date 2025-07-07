@@ -2,14 +2,14 @@ export class project {
     #complete = false;
     title;
     desc;
-    projectID;
+    projectId;
     todoItems;
     constructor(title, desc) {
         this.title = title;
         this.desc = desc;
         this.todoItems = [];
         this.#complete = false;
-        this.projectID = crypto.randomUUID();
+        this.projectId = crypto.randomUUID();
     }
 
     get complete() {return this.#complete; }
@@ -20,6 +20,6 @@ export class projectLocalStorage {
     complete = false;
     title;
     desc;
-    projectID;
+    projectId;
     todoItems = [];
 }

@@ -4,7 +4,7 @@ export class TodoItem {
 
     #completed = false;
     #dateCreated;
-    itemID;
+    itemId;
     priority;
     dateDue;
     description;
@@ -15,20 +15,11 @@ export class TodoItem {
         this.priority = priority;
         this.#completed = false;
         this.#dateCreated = new Date();
-        this.itemID = crypto.randomUUID();
+        this.itemId = crypto.randomUUID();
     }
 
     get completed() {return this.#completed;}
     set completed(value) {this.#completed = value;}
 
     get dateCreatedFormatted() {return format(this.#dateCreated, "dd/mm/yyyy");}
-}
-
-export class TodoItemLocalStorage {
-    completed = false;
-    dateCreated;
-    dateDue;
-    itemID;
-    priority;
-    description;
 }

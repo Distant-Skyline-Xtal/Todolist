@@ -1,6 +1,6 @@
-import { projectLocalStorage } from "./data/project.js";
-import { project } from "./data/project.js";
-import { TodoItemLocalStorage } from "./data/todoItem.js";
+import { projectLocalStorage } from "./models/project.js";
+import { project } from "./models/project.js";
+import { TodoItemLocalStorage } from "./models/todoItem.js";
 
 
 class dataLocalStorage {
