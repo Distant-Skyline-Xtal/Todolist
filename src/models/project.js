@@ -1,4 +1,4 @@
-export class project {
+export class Project {
     #complete = false;
     title;
     desc;
@@ -14,12 +14,4 @@ export class project {
 
     get complete() {return this.#complete; }
     set complete(value) {this.#complete = value;}
-}
-
-export class projectLocalStorage {
-    complete = false;
-    title;
-    desc;
-    projectId;
-    todoItems = [];
 }
