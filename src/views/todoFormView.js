@@ -127,6 +127,10 @@ export class TodoFormView {
         this.#overlayDiv.addEventListener("click", (event) => {
             this.handleClick(event);
         });
+
+        this.#todoItemForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+        });
     }
 
 

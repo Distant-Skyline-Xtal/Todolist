@@ -52,7 +52,8 @@ export class AppController {
     }
 
     destroy() {
-
+        this.projectController.destroy();
+        
     }
     
 }

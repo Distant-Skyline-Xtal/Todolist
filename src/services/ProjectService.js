@@ -1,4 +1,4 @@
-import { project } from "../models/project";
+import { Project } from "../models/project";
 import { TodoItem } from "../models/todoItem";
 
 export class ProjectService {
@@ -11,7 +11,7 @@ export class ProjectService {
     }
 
     createProject(title, description) {
-        const newProject = new project(title, description);
+        const newProject = new Project(title, description);
         this.projects.push(newProject);
         return newProject;
     }
@@ -41,7 +41,7 @@ export class ProjectService {
 
 
     createProjectFromData(loadedProject) {
-        const newProject = new project(loadedProject.title, loadedProject.description);
+        const newProject = new Project(loadedProject.title, loadedProject.description);
         newProject.projectId = loadedProject.projectId;
         newProject.complete = loadedProject.complete;
 

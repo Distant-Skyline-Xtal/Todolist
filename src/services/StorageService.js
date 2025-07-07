@@ -33,7 +33,7 @@ export class StorageService {
             return true;
         }
         catch(error) {
-            console.error("Failed to save projects:", erorr);
+            console.error("Failed to save projects:", error);
             return false;
         }
     }

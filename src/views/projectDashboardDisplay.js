@@ -9,14 +9,15 @@ export class ProjectView {
         this.projectContainer = document.getElementById("content");
         this.projectCardContainer = document.querySelector(".project-container");
         
+        this.boundHandleClick = this.handleClick.bind(this);
+
         this.setupEventDelegation();
     }
 
     setupEventDelegation() {
-        this.projectContainer.addEventListener("click", (event) => {
-            this.handleClick(event);
-        });
+        this.projectContainer.addEventListener("click", this.boundHandleClick);
     }
+    
 
     handleClick(event) {
         const target = event.target;

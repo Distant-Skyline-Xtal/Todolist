@@ -20,11 +20,15 @@ export class ProjectFormView {
     handleClick(event) {
         const target = event.target;
         if (target.matches('.create-project-btn')) {
-            console.log("clicked create project button");
-            const title = this.nameInput.value;
-            const description = this.descriptionInput.value;
+            const title = this.nameInput.value.trim();
+            const description = this.descriptionInput.value.trim();
+
+            if (!title || !description) {
+                alert("Please fill in all fields");
+                return;
+            }
+
             if (this.eventHandlers.onProjectCreate) {
-                console.log("invoking onProjectCreate");
                 this.eventHandlers.onProjectCreate(title, description);
             }
         }
@@ -98,6 +102,10 @@ export class ProjectFormView {
     setupEventDelegation() {
         this.#overlayDiv.addEventListener("click", (event) => {
             this.handleClick(event);
+        });
+
+        this.#projectForm.addEventListener('submit', (e) => {
+            e.preventDefault();
         });
     }
 

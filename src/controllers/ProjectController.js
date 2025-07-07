@@ -53,5 +53,9 @@ export class ProjectController {
 
                 this.projectView.renderTodoItem(todoItem, projectId);
         });
+
+        this.todoFormView.onCancel(() => {
+            this.todoFormView.removePopup();
+        })
     }
 }
